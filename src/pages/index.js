@@ -3,7 +3,64 @@ import Container from "../components/Container";
 import SeO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { StaticImage } from "gatsby-plugin-image";
+import { useEffect } from "react";
+
 const IndexPage = () => {
+  // const handleScrollAnimation = () => {
+  //   const presentation = document.querySelector(".presentation");
+  //   const skills = document.querySelector(".skills");
+  //   const presentationHeight = presentation.offsetHeight;
+
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+
+  //     if (scrollPosition <= presentationHeight) {
+  //       presentation.style.transform = `translateY(${scrollPosition}px)`;
+  //     } else {
+  //       presentation.style.transform = `translateY(${presentationHeight}px)`;
+  //       skills.style.transform = `translateY(${
+  //         scrollPosition - presentationHeight
+  //       }px)`;
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // };
+  // useEffect(handleScrollAnimation, []);
+
+  const handleScroll = () => {
+    const container = document.querySelector(".container");
+    const presentation = document.querySelector(".presentation");
+    const skills = document.querySelector(".skills");
+
+    const presentationHeight = presentation.offsetHeight;
+    const skillsHeight = skills.offsetHeight;
+    const scrollPosition = container.scrollTop;
+
+    console.log(presentationHeight, skillsHeight, scrollPosition);
+    if (skillsHeight > scrollPosition - 300) {
+      console.log("BAM!!");
+      presentation.style.transform = `translateY(${scrollPosition}px)`;
+    }
+    // else {
+    //   presentation.style.transform = `translateY(${presentationHeight}px)`;
+    //   skills.style.transform = `translateY(${
+    //     scrollPosition - presentationHeight
+    //   }px)`;
+    // }
+  };
+
+  useEffect(() => {
+    // handleScroll();
+    document
+      .querySelector(".container")
+      .addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Container>
       <SeO title="Home" />
@@ -11,7 +68,7 @@ const IndexPage = () => {
       <div className="container">
         <section className="presentation" id="presentation">
           <span className="greeting">
-            <span class="czesc">CZEŚĆ</span> 🖖, NAZYWAM SIĘ
+            <span className="czesc">CZEŚĆ</span> 🖖, NAZYWAM SIĘ
           </span>
           <span className="name">Paweł Daniszewski</span>
           <span className="occupation">DEVELOPER</span>
@@ -62,7 +119,9 @@ const IndexPage = () => {
             <input type="email" name="email" id="email" />
             <label htmlFor="message">Treść wiadomości:</label>
             <textarea type="textArea" name="message" id="message" />
-            <submit>WYŚLIJ</submit>
+            <button type="submit" className="submit">
+              WYŚLIJ
+            </button>
           </form>
         </section>
       </div>

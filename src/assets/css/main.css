@@ -26,14 +26,14 @@ body {
 }
 .container {
   position: absolute;
-  top: calc(7vh + 55px);
+  top: calc(10vh + 55px);
   width: 100vw;
-  height: auto;
-  overflow: hidden;
+  height: calc(100vh - (10vh + 55px)); /* Zmiana wysokości .container */
+  overflow-y: scroll; /* Dodanie przewijania w pionie */
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 100vh);
-
+  grid-template-rows: repeat(4, 80vh);
   grid-template-areas:
     "presentation ."
     ". skills"
@@ -46,7 +46,7 @@ body {
   width: 595px;
   grid-area: skills;
   position: relative;
-  justify-self: center;
+  justify-self: left;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,7 @@ body {
 }
 .contact {
   width: 950px;
-  height: 720px;
+  height: 600px;
   grid-area: contact;
   position: relative;
   font-size: 1.9rem;
@@ -118,10 +118,15 @@ body {
   padding: 15px;
   color: white;
 }
-.contact submit {
+.contact .submit {
   align-self: center;
   background-color: #174cd3;
   padding: 15px 40px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  letter-spacing: 2px;
 }
 .projects {
   width: 990px;
@@ -197,6 +202,7 @@ body {
   margin-right: 200px;
   padding: 30px;
 }
+
 .presentation:before {
   content: "";
   position: absolute;
