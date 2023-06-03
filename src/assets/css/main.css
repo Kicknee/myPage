@@ -21,7 +21,6 @@ body {
   height: 100vh;
   overflow: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   scroll-padding-top: 25vh;
 }
 .container {
@@ -31,6 +30,7 @@ body {
   height: calc(100vh - (10vh + 55px)); /* Zmiana wysokości .container */
   overflow-y: scroll; /* Dodanie przewijania w pionie */
   overflow-x: hidden;
+  scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 80vh);

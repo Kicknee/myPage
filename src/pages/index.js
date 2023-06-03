@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { StaticImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   // const handleScrollAnimation = () => {
   //   const presentation = document.querySelector(".presentation");
   //   const skills = document.querySelector(".skills");
@@ -41,24 +41,25 @@ const IndexPage = () => {
     const skillsHeight = skills.offsetHeight;
     const scrollPosition = container.scrollTop;
 
-    console.log(presentationHeight, skillsHeight, scrollPosition);
     if (skillsHeight > scrollPosition - 300) {
-      console.log("BAM!!");
       presentation.style.transform = `translateY(${scrollPosition}px)`;
     }
-    // else {
-    //   presentation.style.transform = `translateY(${presentationHeight}px)`;
-    //   skills.style.transform = `translateY(${
-    //     scrollPosition - presentationHeight
-    //   }px)`;
-    // }
   };
 
   useEffect(() => {
-    // handleScroll();
     document
       .querySelector(".container")
       .addEventListener("scroll", handleScroll);
+
+    document
+      .querySelector(".presentaion-link")
+      .addEventListener("click", (e) => {
+        document.querySelector(".container").scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
   }, []);
 
   return (

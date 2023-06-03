@@ -6,10 +6,14 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="nav-links">
         <li>
-          <Link to="#presentation">Główna</Link>
+          <Link to="/" className="presentaion-link">
+            Główna
+          </Link>
         </li>
         <li>
-          <Link to="#skills">Umiejętności</Link>
+          <Link to="#skills" className="skills-link">
+            Umiejętności
+          </Link>
         </li>
         <li>
           <Link to="#projects">Projekty</Link>
