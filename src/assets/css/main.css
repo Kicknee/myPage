@@ -40,6 +40,10 @@ body {
     "projects projects"
     "contact contact";
 }
+/* .body::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+  display: none;
+} */
 
 .skills {
   height: 720px;
@@ -227,14 +231,12 @@ body {
   );
 }
 .navbar {
-  /* grid-area: navbar; */
   position: fixed;
   top: 7vh;
   left: 50vw;
   width: 595px;
   height: 55px;
   z-index: 13;
-  /* align-self: self-start; */
   display: flex;
   justify-content: end;
   padding: 0 20px;
@@ -282,15 +284,24 @@ body {
   margin-top: 20px;
 }
 
-/* @media (max-width: 1024px) {
-  .container > * {
-    scale: 0.8;
+@media (max-width: 1300px) {
+  .presentation {
+    margin-right: 100px;
+  }
+}
+@media (max-width: 1150px) {
+  .navbar {
+    width: 500px;
   }
   .presentation {
-    margin-right: 0;
+    margin-right: 50px;
   }
-} */
-@media (max-width: 912px) {
+  .skills {
+    width: 500px;
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 1000px) {
   .navbar {
     width: 100%;
     left: 0;
@@ -314,6 +325,7 @@ body {
   .skills {
     width: 80%;
     font-size: 2.3rem;
+    justify-self: center;
   }
   .projects {
     width: 90%;

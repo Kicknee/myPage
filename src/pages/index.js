@@ -33,16 +33,19 @@ const IndexPage = (props) => {
   // useEffect(handleScrollAnimation, []);
 
   const handleScroll = () => {
-    const container = document.querySelector(".container");
-    const presentation = document.querySelector(".presentation");
-    const skills = document.querySelector(".skills");
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 1000) {
+      const container = document.querySelector(".container");
+      const presentation = document.querySelector(".presentation");
+      const skills = document.querySelector(".skills");
 
-    const presentationHeight = presentation.offsetHeight;
-    const skillsHeight = skills.offsetHeight;
-    const scrollPosition = container.scrollTop;
+      const presentationHeight = presentation.offsetHeight;
+      const skillsHeight = skills.offsetHeight;
+      const scrollPosition = container.scrollTop;
 
-    if (skillsHeight > scrollPosition - 300) {
-      presentation.style.transform = `translateY(${scrollPosition}px)`;
+      if (skillsHeight > scrollPosition - 300) {
+        presentation.style.transform = `translateY(${scrollPosition}px)`;
+      }
     }
   };
 
