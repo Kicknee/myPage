@@ -6,32 +6,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
 
 const IndexPage = (props) => {
-  // const handleScrollAnimation = () => {
-  //   const presentation = document.querySelector(".presentation");
-  //   const skills = document.querySelector(".skills");
-  //   const presentationHeight = presentation.offsetHeight;
-
-  //   const handleScroll = () => {
-  //     const scrollPosition = window.scrollY;
-
-  //     if (scrollPosition <= presentationHeight) {
-  //       presentation.style.transform = `translateY(${scrollPosition}px)`;
-  //     } else {
-  //       presentation.style.transform = `translateY(${presentationHeight}px)`;
-  //       skills.style.transform = `translateY(${
-  //         scrollPosition - presentationHeight
-  //       }px)`;
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // };
-  // useEffect(handleScrollAnimation, []);
-
   const handleScroll = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
