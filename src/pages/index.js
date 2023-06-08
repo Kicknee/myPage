@@ -17,7 +17,7 @@ const IndexPage = (props) => {
       const skillsHeight = skills.offsetHeight;
       const scrollPosition = container.scrollTop;
 
-      if (skillsHeight > scrollPosition - 500) {
+      if (skillsHeight > scrollPosition / 2) {
         presentation.style.transform = `translateY(${scrollPosition}px)`;
       }
     }
