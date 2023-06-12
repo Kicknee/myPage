@@ -26,8 +26,8 @@ body {
   position: absolute;
   top: calc(10vh + 55px);
   width: 100vw;
-  height: calc(100vh - (10vh + 55px)); /* Zmiana wysokości .container */
-  overflow-y: scroll; /* Dodanie przewijania w pionie */
+  height: calc(100vh - (10vh + 55px));
+  overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
   display: grid;
@@ -303,9 +303,12 @@ body {
 @media (max-width: 1000px) {
   .navbar {
     width: 100%;
+    top: 10px;
     left: 0;
   }
   .container {
+    top: calc(5vh + 55px);
+    height: calc(100vh - (5vh + 55px));
     grid-template-columns: 100%;
     grid-template-areas:
       "presentation"
