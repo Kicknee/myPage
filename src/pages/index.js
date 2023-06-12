@@ -6,27 +6,27 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
 
 const IndexPage = (props) => {
-  function handleScroll(e) {
+  const handleScroll = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
       const container = document.querySelector(".container");
       const presentation = document.querySelector(".presentation");
       const skills = document.querySelector(".skills");
       const windowOffSet = Math.floor(window.innerHeight * 0.1 + 55);
-      const presentationHeight = presentation.offsetHeight;
-      const skillsHeight = skills.offsetHeight;
-      const scrollPosition = this.scrollTop;
+      const presentationHeight = presentation.offsetTop;
+      const skillsHeight = skills.offsetTop;
+      const scrollPosition = container.scrollTop;
       console.log(
         presentationHeight,
         scrollPosition,
         skillsHeight,
         windowOffSet
       );
-      if (windowOffSet + presentationHeight + skillsHeight > scrollPosition) {
+      if (skillsHeight > presentationHeight + scrollPosition) {
         presentation.style.transform = `translateY(${scrollPosition}px)`;
       }
     }
-  }
+  };
 
   useEffect(() => {
     document
