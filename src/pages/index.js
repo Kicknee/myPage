@@ -89,7 +89,7 @@ const IndexPage = (props) => {
           </div>
         </section>
         <section className="contact" id="contact">
-          <form action="">
+          <form action="https://formspree.io/f/mknadrqp" method="POST">
             <label htmlFor="name">Imię i nazwisko:</label>
             <input type="text" name="name" id="name" />
             <label htmlFor="email">Adres email:</label>
