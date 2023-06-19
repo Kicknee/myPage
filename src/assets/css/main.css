@@ -212,6 +212,9 @@ body {
   text-transform: lowercase;
   list-style: square;
 }
+.project .projectTechStack li {
+  margin-top: 3px;
+}
 .project .projectSource {
   text-align: end;
   align-items: center;
