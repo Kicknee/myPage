@@ -28,7 +28,7 @@ const IndexPage = (props) => {
       .addEventListener("scroll", handleScroll);
 
     document
-      .querySelector(".presentaion-link")
+      .querySelector("#presentaion-link")
       .addEventListener("click", (e) => {
         document.querySelector(".container").scrollTo({
           top: 0,
@@ -41,7 +41,7 @@ const IndexPage = (props) => {
   return (
     <Container>
       <SeO title="Home" />
-      <Navbar />
+      <Navbar currentSection={props.location.hash} />
       <div className="container">
         <section className="presentation" id="presentation">
           <span className="greeting">
