@@ -6,10 +6,11 @@ import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
 import { BsGithub } from "react-icons/bs";
+import { BiCodeCurly } from "react-icons/bi";
 
 export const query = graphql`
   query MyQuery {
-    allContentfulMyPage {
+    allContentfulMyPage(sort: { order: ASC }) {
       nodes {
         title
         techStack {
@@ -20,6 +21,7 @@ export const query = graphql`
         }
         description
         sourceCode
+        www
       }
     }
   }
@@ -110,6 +112,13 @@ const IndexPage = (props) => {
                     })}
                   </ul>
                   <div className="projectSource">
+                    {project.title !== "MyPage" ? (
+                      <a href={project.www} target="_blank">
+                        <BiCodeCurly />
+                      </a>
+                    ) : (
+                      ""
+                    )}
                     <a href={project.sourceCode} target="_blank">
                       <BsGithub />
                     </a>

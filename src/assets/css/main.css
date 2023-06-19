@@ -204,7 +204,7 @@ body {
   margin-bottom: 5px;
 }
 .project .projectDesc {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 25px;
 }
 .project .projectTechStack {
@@ -213,9 +213,11 @@ body {
 }
 .project .projectSource {
   text-align: end;
+  align-items: center;
   font-size: 1.7rem;
 }
 .project .projectSource a {
+  padding: 10px;
   color: inherit;
 }
 .project .projectTechStack span::after {
