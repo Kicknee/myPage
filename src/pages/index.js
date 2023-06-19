@@ -2,10 +2,31 @@ import React from "react";
 import Container from "../components/Container";
 import SeO from "../components/SEO";
 import Navbar from "../components/Navbar";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
+import { BsGithub } from "react-icons/bs";
 
+export const query = graphql`
+  query MyQuery {
+    allContentfulMyPage {
+      nodes {
+        title
+        techStack {
+          list
+        }
+        screen {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+        }
+        description
+        sourceCode
+      }
+    }
+  }
+`;
 const IndexPage = (props) => {
+  const projects = props.data.allContentfulMyPage.nodes;
+
   const handleScroll = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
@@ -19,6 +40,10 @@ const IndexPage = (props) => {
       if (skillsHeight > presentationHeight + scrollPosition - windowOffSet) {
         presentation.style.transform = `translateY(${scrollPosition}px)`;
       }
+    } else {
+      document.querySelector(
+        ".presentation"
+      ).style.transform = `translateY(0px)`;
     }
   };
 
@@ -67,7 +92,33 @@ const IndexPage = (props) => {
           <div className="skill">GIT</div>
         </section>
         <section className="projects" id="projects">
-          <div className="project project-1">
+          {projects.map((project, indx) => {
+            const projectScreen = getImage(project.screen);
+            return (
+              <div key={indx} className="project">
+                <GatsbyImage
+                  image={projectScreen}
+                  alt="projectThumb"
+                  className="projectThumb"
+                />
+                <div className="projectInfo">
+                  <div className="projectTitle">{project.title}</div>
+                  <div className="projectDesc">{project.description}</div>
+                  <ul className="projectTechStack">
+                    {project.techStack.list.map((el) => {
+                      return <li>{el}</li>;
+                    })}
+                  </ul>
+                  <div className="projectSource">
+                    <a href={project.sourceCode} target="_blank">
+                      <BsGithub />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          {/* <div className="project project-1">
             <StaticImage
               src="../assets/images/img1.png"
               alt="projectThumb"
@@ -86,7 +137,7 @@ const IndexPage = (props) => {
             <div className="projectInfo">
               Strona internetowa dla zakladu kosmetycznego.
             </div>
-          </div>
+          </div> */}
         </section>
         <section className="contact" id="contact">
           <form action="https://formspree.io/f/mknadrqp" method="POST">

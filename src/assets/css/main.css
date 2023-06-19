@@ -195,9 +195,34 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-self: center;
   padding: 30px;
-  font-size: 1.3rem;
+}
+.project .projectTitle {
+  font-size: 1.9rem;
+  margin-bottom: 5px;
+}
+.project .projectDesc {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.project .projectTechStack {
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+.project .projectSource {
+  text-align: end;
+  font-size: 1.7rem;
+}
+.project .projectSource a {
+  color: inherit;
+}
+.project .projectTechStack span::after {
+  content: " | ";
+}
+.project .projectTechStack span:last-of-type::after {
+  content: "";
 }
 .projectInfo:before {
   content: "";
