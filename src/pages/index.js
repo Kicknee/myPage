@@ -26,6 +26,7 @@ export const query = graphql`
     }
   }
 `;
+
 const IndexPage = (props) => {
   const projects = props.data.allContentfulMyPage.nodes;
 
@@ -49,13 +50,16 @@ const IndexPage = (props) => {
     }
   };
 
+  // function scrollToTop(){
+
+  // }
   useEffect(() => {
     document
       .querySelector(".container")
       .addEventListener("scroll", handleScroll);
 
     document
-      .querySelector("#presentaion-link")
+      .querySelector("#presentation-link")
       .addEventListener("click", (e) => {
         document.querySelector(".container").scrollTo({
           top: 0,
@@ -64,11 +68,11 @@ const IndexPage = (props) => {
         });
       });
   }, []);
-
+  //currentSection={props.location.hash}
   return (
     <Container>
       <SeO title="Home" />
-      <Navbar currentSection={props.location.hash} />
+      <Navbar />
       <div className="container">
         <section className="presentation" id="presentation">
           <span className="greeting">
@@ -107,8 +111,8 @@ const IndexPage = (props) => {
                   <div className="projectTitle">{project.title}</div>
                   <div className="projectDesc">{project.description}</div>
                   <ul className="projectTechStack">
-                    {project.techStack.list.map((el) => {
-                      return <li>{el}</li>;
+                    {project.techStack.list.map((el, num) => {
+                      return <li key={num}>{el}</li>;
                     })}
                   </ul>
                   <div className="projectSource">
