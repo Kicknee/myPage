@@ -50,9 +50,6 @@ const IndexPage = (props) => {
     }
   };
 
-  // function scrollToTop(){
-
-  // }
   useEffect(() => {
     document
       .querySelector(".container")

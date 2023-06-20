@@ -14,10 +14,12 @@ const Navbar = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.id !== "presentation") {
+          console.log(entry.target.id);
+          if (entry.isIntersecting) {
+            console.log(entry.target.id, entry.target.offsetTop);
             setCurrentSection(entry.target.id);
-          } else {
-            setCurrentSection("presentation");
+          } else if (!entry.isIntersecting) {
+            setCurrentSection("");
           }
         });
       },
@@ -39,7 +41,7 @@ const Navbar = () => {
           <Link
             to="/"
             id="presentation-link"
-            style={currentSection === "presentation" ? activeLink : {}}
+            // style={currentSection === "presentation" ? activeLink : {}}
           >
             Główna
           </Link>
