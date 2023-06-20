@@ -26,6 +26,7 @@ const Navbar = () => {
       {
         root: document.querySelector(".container"),
         threshold: 0.4,
+        rootMargin: "70px 0px 70px 0px ",
       }
     );
 
