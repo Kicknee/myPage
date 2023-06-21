@@ -93,6 +93,7 @@ const IndexPage = (props) => {
           <div className="skill">NodeJS / NPM</div>
           <div className="skill">MongoDB</div>
           <div className="skill">GIT</div>
+          <div className="skill">DOCKER</div>
         </section>
         <section className="projects" id="projects">
           {projects.map((project, indx) => {
