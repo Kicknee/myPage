@@ -10,7 +10,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const sections = [...document.querySelectorAll("section")];
-    sections.shift();
+    // sections.shift();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,7 +19,7 @@ const Navbar = () => {
           if (entry.isIntersecting) {
             console.log(entry.target.id, entry.target.offsetTop);
             setCurrentSection(entry.target.id);
-          } else if (!entry.isIntersecting) {
+          } else if (entry.target.id === null) {
             setCurrentSection("");
           }
         });
