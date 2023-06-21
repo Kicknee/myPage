@@ -78,7 +78,7 @@ const IndexPage = (props) => {
           <span className="name">Paweł Daniszewski</span>
           <span className="occupation">DEVELOPER</span>
           <span className="more-info">
-            Jestem fron-end developerem z Warszawy
+            Jestem front-end developerem z Warszawy
           </span>
         </section>
         <section className="skills" id="skills">
