@@ -8,33 +8,33 @@ const Navbar = () => {
     color: "#ff9933",
   };
 
-  useEffect(() => {
-    const sections = [...document.querySelectorAll("section")];
-    // sections.shift();
+  // useEffect(() => {
+  //   const sections = [...document.querySelectorAll("section")];
+  //   // sections.shift();
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          console.log(entry.target.id);
-          if (entry.isIntersecting) {
-            console.log(entry.target.id, entry.target.offsetTop);
-            setCurrentSection(entry.target.id);
-          } else if (entry.target.id === null) {
-            setCurrentSection("");
-          }
-        });
-      },
-      {
-        root: document.querySelector(".container"),
-        threshold: 0.4,
-        rootMargin: "70px 0px 70px 0px ",
-      }
-    );
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         console.log(entry.target.id);
+  //         if (entry.isIntersecting) {
+  //           console.log(entry.target.id, entry.target.offsetTop);
+  //           setCurrentSection(entry.target.id);
+  //         } else if (entry.target.id === null) {
+  //           setCurrentSection("");
+  //         }
+  //       });
+  //     },
+  //     {
+  //       root: document.querySelector(".container"),
+  //       threshold: 0.4,
+  //       rootMargin: "70px 0px 70px 0px ",
+  //     }
+  //   );
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  }, []);
+  //   sections.forEach((section) => {
+  //     observer.observe(section);
+  //   });
+  // }, []);
 
   return (
     <nav className="navbar">
