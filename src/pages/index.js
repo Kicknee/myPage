@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import SeO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { graphql } from "gatsby";
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useEffect } from "react";
 import { BsGithub } from "react-icons/bs";
 import { BiCodeCurly } from "react-icons/bi";
@@ -30,7 +30,7 @@ export const query = graphql`
 const IndexPage = (props) => {
   const projects = props.data.allContentfulMyPage.nodes;
 
-  const handleScroll = () => {
+  const handlePresentationScroll = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
       const container = document.querySelector(".container");
@@ -53,7 +53,7 @@ const IndexPage = (props) => {
   useEffect(() => {
     document
       .querySelector(".container")
-      .addEventListener("scroll", handleScroll);
+      .addEventListener("scroll", handlePresentationScroll);
 
     document
       .querySelector("#presentation-link")
@@ -64,6 +64,26 @@ const IndexPage = (props) => {
           behavior: "smooth",
         });
       });
+
+    //animate projects tiles
+
+    const sections = document.querySelectorAll(".project");
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target.id);
+          entry.target.classList.add("active");
+        }
+        if (!entry.isIntersecting) {
+          entry.target.classList.remove("active");
+        }
+      });
+    });
+
+    sections.forEach((section) => {
+      sectionObserver.observe(section);
+    });
   }, []);
   //currentSection={props.location.hash}
   return (
@@ -129,26 +149,6 @@ const IndexPage = (props) => {
               </div>
             );
           })}
-          {/* <div className="project project-1">
-            <StaticImage
-              src="../assets/images/img1.png"
-              alt="projectThumb"
-              className="projectThumb"
-            />
-            <div className="projectInfo">
-              Strona internetowa dla zakladu kosmetycznego.
-            </div>
-          </div>
-          <div className="project project-2">
-            <StaticImage
-              src="../assets/images/img1.png"
-              alt="projectThumb"
-              className="projectThumb"
-            />
-            <div className="projectInfo">
-              Strona internetowa dla zakladu kosmetycznego.
-            </div>
-          </div> */}
         </section>
         <section className="contact" id="contact">
           <form action="https://formspree.io/f/mknadrqp" method="POST">

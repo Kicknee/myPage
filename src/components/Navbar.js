@@ -8,9 +8,11 @@ const Navbar = () => {
     color: "#ff9933",
   };
 
+  //DO ZMIANY!!
+
   // useEffect(() => {
   //   const sections = [...document.querySelectorAll("section")];
-  //   // sections.shift();
+  //   sections.shift();
 
   //   const observer = new IntersectionObserver(
   //     (entries) => {
@@ -19,14 +21,20 @@ const Navbar = () => {
   //         if (entry.isIntersecting) {
   //           console.log(entry.target.id, entry.target.offsetTop);
   //           setCurrentSection(entry.target.id);
-  //         } else if (entry.target.id === null) {
+  //         }
+
+  //         if (
+  //           (!entry.isIntersecting && entry.target.id === "skills") ||
+  //           (!entry.isIntersecting && entry.target.id === "projects") ||
+  //           (!entry.isIntersecting && entry.target.id === "contact")
+  //         ) {
   //           setCurrentSection("");
   //         }
   //       });
   //     },
   //     {
   //       root: document.querySelector(".container"),
-  //       threshold: 0.4,
+  //       threshold: 0.9,
   //       rootMargin: "70px 0px 70px 0px ",
   //     }
   //   );
