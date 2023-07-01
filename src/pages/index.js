@@ -107,10 +107,11 @@ const IndexPage = (props) => {
           <div className="skill">JAVA SCRIPT</div>
           <div className="skill">SASS</div>
           <div className="skill">REACT.JS</div>
+          <div className="skill">TypeScript</div>
           <div className="skill">GATSBY</div>
-          <div className="skill">EXPRESS</div>
+          <div className="skill">EXPRESS.JS</div>
           <div className="skill">PHOTOSHOP</div>
-          <div className="skill">NodeJS / NPM</div>
+          <div className="skill">NODE.JS / NPM</div>
           <div className="skill">MongoDB</div>
           <div className="skill">GIT</div>
           <div className="skill">DOCKER</div>
