@@ -1,7 +1,7 @@
 ## MyPage
 #### English description below
 
-
+<br>
 
 ![myPage_main_gif](https://github.com/Kicknee/myPage/assets/47301333/cc270b62-9662-4bc9-9bd5-db0f49622b45)
 
