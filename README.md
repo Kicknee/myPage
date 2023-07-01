@@ -7,9 +7,9 @@
 
 ### Opis / Description
 
-Moja strona z motywem przewodnim matrix. Zbudowana jest z kilku sekcji zawierających takie informacje jak krótki wstęp o mnie, mój tech stack, część moich projektów z GitHuba, a także formularz kontaktowy obługiwany przez serwis Formspree. Strona jest zbudowana na gatsbym (react.js), czyli statycznym generatorze stron. Dodadkowo wykorzystuję CMS-a Contentful do zarządzania informacjami na temat moich projektów. Informacje są pobierane przy użyciu GraphQL.
+Moja strona z motywem przewodnim matrix. Zbudowana jest z kilku sekcji zawierających takie informacje jak krótki wstęp o mnie, mój tech stack, część moich projektów z GitHuba, a także formularz kontaktowy obługiwany przez serwis Formspree. Strona jest zbudowana na Gatsby (React.js), czyli statycznym generatorze stron. Dodadkowo wykorzystuję CMS-a Contentful do zarządzania informacjami na temat moich projektów. Informacje są pobierane przy użyciu GraphQL.
 <br><br>
-This is my website with a matrix theme. It's built on several sections that provide information like a short introduction about me, my tech stack, some of my GitHub projects, and a contact form powered by Formspree. The website is built on Gatsby (react.js), a static site generator. In addition, I use the Contentful CMS to manage information about my projects. The information is fetched using GraphQL.
+This is my website with a matrix theme. It's built on several sections that provide information like a short introduction about me, my tech stack, some of my GitHub projects, and a contact form powered by Formspree. The website is built with Gatsby (React.js), a static site generator. In addition, I use the Contentful CMS to manage information about my projects. The information is fetched using GraphQL.
 
 ---
 
