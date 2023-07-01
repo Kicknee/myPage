@@ -1,99 +1,39 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+## MyPage
+#### English description below
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+![myPage_main_gif](https://github.com/Kicknee/myPage/assets/47301333/cc270b62-9662-4bc9-9bd5-db0f49622b45)
 
-1.  **Create a Gatsby site.**
+### Opis / Description
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+Moja strona z motywem przewodnim matrix. Zbudowana jest z kilku sekcji zawierających takie informacje jak krótki wstęp o mnie, mój tech stack, część moich projektów z GitHuba, a także formularz kontaktowy obługiwany przez serwis Formspree. Strona jest zbudowana na gatsbym (react.js), czyli statycznym generatorze stron. Dodadkowo wykorzystuję CMS-a Contentful do zarządzania informacjami na temat moich projektów. Informacje są pobierane przy użyciu GraphQL.
+<br><br>
+This is my website with a matrix theme. It's built on several sections that provide information like a short introduction about me, my tech stack, some of my GitHub projects, and a contact form powered by Formspree. The website is built on Gatsby (react.js), a static site generator. In addition, I use the Contentful CMS to manage information about my projects. The information is fetched using GraphQL.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+---
 
-1.  **Start developing.**
+![Zrzut ekranu 2023-07-1 o 12 12 18](https://github.com/Kicknee/myPage/assets/47301333/8f7a27c3-71b5-4b7a-be7b-9a12dad78609)
+*Kafelka z krótką prezentacją / A tile with a short introduction*
 
-    Navigate into your new site’s directory and start it up.
+---
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+![Zrzut ekranu 2023-07-1 o 12 12 36](https://github.com/Kicknee/myPage/assets/47301333/b178c723-8de6-486c-b5bc-bfcc6dabf6e3)
+*Następna sekcja zawiera listę technologi, których używam / The next section lists the technologies I use*
 
-1.  **Open the source code and start editing!**
+---
 
-    Your site is now running at `http://localhost:8000`!
+![Zrzut ekranu 2023-07-1 o 12 13 09](https://github.com/Kicknee/myPage/assets/47301333/e61bb209-61ac-46d3-8256-1b161476a202)
+*Kolejna zawiera informacje pobrane z CMS-a na temat części moich projektów / The next one contains information fetched from the CMS about some of my projects*
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+---
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+![Zrzut ekranu 2023-07-1 o 12 13 22](https://github.com/Kicknee/myPage/assets/47301333/7c4fdebf-fcb1-4545-a766-092869a039d4)
+*Ostnia sekcja to formularz kontaktowy obsługiwany przez Formspree / The last section is a contact form powered by Formspree*
 
-## 🚀 Quick start (Netlify)
+---
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+![mobile_comp](https://github.com/Kicknee/myPage/assets/47301333/9b413fb0-10f9-48ec-8480-e96f6c34a38f)![myPage_mobile_gif](https://github.com/Kicknee/myPage/assets/47301333/2a58e864-59ca-49c1-ad48-f8864a49e4a8)
+<br>*Mobilna wersja / Mobile version*
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-1.  **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+---
