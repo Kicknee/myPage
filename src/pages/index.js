@@ -102,19 +102,19 @@ const IndexPage = (props) => {
           </span>
         </section>
         <section className="skills" id="skills">
-          <div className="skill">HTML</div>
-          <div className="skill">CSS</div>
-          <div className="skill">JAVA SCRIPT</div>
-          <div className="skill">SASS</div>
-          <div className="skill">REACT.JS</div>
-          <div className="skill">TypeScript</div>
-          <div className="skill">GATSBY</div>
+          <div className="skill color">HTML</div>
           <div className="skill">EXPRESS.JS</div>
-          <div className="skill">PHOTOSHOP</div>
+          <div className="skill">CSS</div>
+          <div className="skill color">PHOTOSHOP</div>
+          <div className="skill color">JAVA SCRIPT</div>
           <div className="skill">NODE.JS / NPM</div>
-          <div className="skill">MongoDB</div>
+          <div className="skill">SASS</div>
+          <div className="skill color">MongoDB</div>
+          <div className="skill color">REACT.JS</div>
           <div className="skill">GIT</div>
-          <div className="skill">DOCKER</div>
+          <div className="skill">TypeScript</div>
+          <div className="skill color">DOCKER</div>
+          <div className="skill color">GATSBY</div>
         </section>
         <section className="projects" id="projects">
           {projects.map((project, indx) => {
