@@ -5,6 +5,7 @@
 
 ![myPage_main_gif](https://github.com/Kicknee/myPage/assets/47301333/cc270b62-9662-4bc9-9bd5-db0f49622b45)
 
+https://kicknee.netlify.app/
 ### Opis / Description
 
 Moja strona z motywem przewodnim matrix. Zbudowana jest z kilku sekcji zawierających takie informacje jak krótki wstęp o mnie, mój tech stack, część moich projektów z GitHuba, a także formularz kontaktowy obługiwany przez serwis Formspree. Strona jest zbudowana na Gatsby (React.js), czyli statycznym generatorze stron. Dodadkowo wykorzystuję CMS-a Contentful do zarządzania informacjami na temat moich projektów. Informacje są pobierane przy użyciu GraphQL.
