@@ -174,7 +174,6 @@ body {
   flex-wrap: wrap;
   font-size: 1.9rem;
   padding: 30px;
-  overflow-y: scroll;
 }
 .skills:before {
   content: "";
