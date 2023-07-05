@@ -26,13 +26,10 @@ export const query = graphql`
   }
 `;
 
-const container = document.querySelector(".container");
-const presentation = document.querySelector(".presentation");
-const skills = document.querySelector(".skills");
 const IndexPage = (props) => {
   const projects = props.data.allContentfulMyPage.nodes;
 
-  const handlePresentationScroll = () => {
+  const handlePresentationScroll = (container, presentation, skills) => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
       const windowOffSet = Math.floor(window.innerHeight * 0.1 + 55);
@@ -50,9 +47,13 @@ const IndexPage = (props) => {
   };
 
   useEffect(() => {
-    document
-      .querySelector(".container")
-      .addEventListener("scroll", handlePresentationScroll);
+    const container = document.querySelector(".container");
+    const presentation = document.querySelector(".presentation");
+    const skills = document.querySelector(".skills");
+
+    document.querySelector(".container").addEventListener("scroll", () => {
+      handlePresentationScroll(container, presentation, skills);
+    });
 
     document
       .querySelector("#presentation-link")
