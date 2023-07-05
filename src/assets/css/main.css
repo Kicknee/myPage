@@ -116,6 +116,7 @@ body {
   justify-self: right;
   margin-right: 200px;
   padding: 30px;
+  /* transition: transform 0.5s; */
 }
 
 .presentation:before {
