@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "../components/Container";
 import SeO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useEffect } from "react";
 import { BsGithub } from "react-icons/bs";
 import { BiCodeCurly } from "react-icons/bi";
 
@@ -29,9 +30,12 @@ export const query = graphql`
 const IndexPage = (props) => {
   const projects = props.data.allContentfulMyPage.nodes;
 
-  const handlePresentationScroll = (container, presentation, skills) => {
+  const handlePresentationScroll = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 1000) {
+      const container = document.querySelector(".container");
+      const presentation = document.querySelector(".presentation");
+      const skills = document.querySelector(".skills");
       const windowOffSet = Math.floor(window.innerHeight * 0.1 + 55);
       const presentationHeight = presentation.offsetTop;
       const skillsHeight = skills.offsetTop;
@@ -47,13 +51,9 @@ const IndexPage = (props) => {
   };
 
   useEffect(() => {
-    const container = document.querySelector(".container");
-    const presentation = document.querySelector(".presentation");
-    const skills = document.querySelector(".skills");
-
-    document.querySelector(".container").addEventListener("scroll", () => {
-      handlePresentationScroll(container, presentation, skills);
-    });
+    document
+      .querySelector(".container")
+      .addEventListener("scroll", handlePresentationScroll);
 
     document
       .querySelector("#presentation-link")
