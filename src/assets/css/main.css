@@ -182,7 +182,9 @@ body {
   padding: 25px;
   width: 50%;
 }
-.skill.color {
+
+.skill:nth-of-type(4n),
+.skill:nth-of-type(4n + 1) {
   color: #ff9933;
 }
 
