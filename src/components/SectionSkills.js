@@ -8,7 +8,7 @@ function SectionSkills() {
       <div className="skill">CSS</div>
       <div className="skill">GIT</div>
       <div className="skill">JAVA SCRIPT</div>
-      <div className="skill">MongoDB</div>
+      <div className="skill">SQL (MySQL)</div>
       <div className="skill">TypeScript</div>
       <div className="skill">DOCKER</div>
       <div className="skill">REACT.JS</div>
