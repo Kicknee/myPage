@@ -1,11 +1,4 @@
 /**
- * Configure your Gatsby site with this file.
- *
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
 
@@ -15,7 +8,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "My Website",
+    title: "Portfolio",
     description: "Nice and clean portfolio website",
     author: "@Pawel Daniszewski",
   },
@@ -29,7 +22,6 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `li7ominkxwu4`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.MYPAGE_API_KEY,
       },
     },
