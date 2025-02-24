@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     allContentfulMyPage: { nodes: projects },
   } = useStaticQuery(graphql`
     query MyQuery {
-      allContentfulMyPage(sort: { order: ASC }) {
+      allContentfulMyPage(sort: { order: DESC }) {
         nodes {
           title
           techStack {
