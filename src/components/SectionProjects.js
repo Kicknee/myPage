@@ -46,8 +46,7 @@ const ProjectsSection = () => {
                 })}
               </ul>
               <div className="projectSource">
-                {project.title !== "MyPage" ||
-                project.title !== "BonjourScanner App" ? (
+                {project.www != undefined ? (
                   <a href={project.www} target="_blank">
                     <BiCodeCurly />
                   </a>
