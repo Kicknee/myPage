@@ -77,6 +77,10 @@ body {
   font-size: 1.3rem;
 }
 .navbar a:hover {
+  color: #f68c22;
+}
+
+.navbar a.active {
   color: #ff9933;
 }
 
