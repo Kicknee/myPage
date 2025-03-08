@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 const IndexPage = () => {
   // const [activeSection, setActiveSection] = useState(null);
 
+  //handle scroll
+
   useEffect(() => {
     document
       .querySelector(".container")
@@ -46,31 +48,29 @@ const IndexPage = () => {
       projectTileObserver.observe(projectTile);
     });
 
-    // const sections = document.querySelectorAll("section:not(.presentation)");
+    const sections = document.querySelectorAll("section:not(.presentation)");
 
-    // const sectionObserver = new IntersectionObserver(
-    //   (entries) => {
-    //     entries.forEach((entry) => {
-    //       if (entry.isIntersecting) {
-    //         const visibleEntries = entries.filter((e) => e.isIntersecting);
-    //         const mostVisible = visibleEntries.reduce(
-    //           (max, e) =>
-    //             e.intersectionRatio > max.intersectionRatio ? e : max,
-    //           entries[0]
-    //         );
-    //         // const currentSection = document.querySelector(
-    //         //   `.${entry.target.className}-link`
-    //         // );
-    //         console.log(mostVisible.target.className);
-    //       }
-    //     });
-    //   },
-    //   { root: document.querySelector(".container"),rootMargin: "50% 0", threshold: 0.5 }
-    // );
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // const currentSection = document.querySelector(
+            //   `.${entry.target.className}-link`
+            // );
+            console.log(entry.target.className);
+          }
+        });
+      },
+      {
+        root: document.querySelector(".container"),
+        // rootMargin: "10%",
+        threshold: 0.3,
+      }
+    );
 
-    // sections.forEach((section) => {
-    //   sectionObserver.observe(section);
-    // });
+    sections.forEach((section) => {
+      sectionObserver.observe(section);
+    });
   }, []);
   //currentSection={props.location.hash}
   return (
