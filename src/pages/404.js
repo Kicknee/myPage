@@ -1,7 +1,8 @@
 import React from "react";
+import SEO from "../components/SEO";
 import Container from "../components/Container";
 import { navigate } from "gatsby";
-import SEO from "../components/SEO";
+
 import "../assets/css/not-found.css";
 
 const Error = () => {
