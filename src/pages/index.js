@@ -1,17 +1,18 @@
-import React from "react";
-import Container from "../components/Container";
+import React, { useEffect } from "react";
+
 import SeO from "../components/SEO";
+import Container from "../components/Container";
 import Navbar from "../components/Navbar";
 import SectionContact from "../components/SectionContact";
 import SectionSkills from "../components/SectionSkills";
 import SectionProjects from "../components/SectionProjects";
 import SectionPresentation from "../components/SectionPresentation";
+
 import { handlePresentationScroll } from "../utils/handlePresentationScroll";
-import { useEffect, useState } from "react";
+
+import "../utils/handleHighlightLinks";
 
 const IndexPage = () => {
-  // const [activeSection, setActiveSection] = useState(null);
-
   //handle scroll
 
   useEffect(() => {
@@ -47,32 +48,7 @@ const IndexPage = () => {
     projectTiles.forEach((projectTile) => {
       projectTileObserver.observe(projectTile);
     });
-
-    const sections = document.querySelectorAll("section:not(.presentation)");
-
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // const currentSection = document.querySelector(
-            //   `.${entry.target.className}-link`
-            // );
-            console.log(entry.target.className);
-          }
-        });
-      },
-      {
-        root: document.querySelector(".container"),
-        // rootMargin: "10%",
-        threshold: 0.3,
-      }
-    );
-
-    sections.forEach((section) => {
-      sectionObserver.observe(section);
-    });
   }, []);
-  //currentSection={props.location.hash}
   return (
     <Container>
       <SeO title="Home" />
