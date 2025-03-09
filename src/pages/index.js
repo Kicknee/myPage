@@ -9,8 +9,7 @@ import SectionProjects from "../components/SectionProjects";
 import SectionPresentation from "../components/SectionPresentation";
 
 import { handlePresentationScroll } from "../utils/handlePresentationScroll";
-
-import "../utils/handleHighlightLinks";
+import { handleHighlightLinks } from "../utils/handleHighlightLinks";
 
 const IndexPage = () => {
   //handle scroll
@@ -30,6 +29,7 @@ const IndexPage = () => {
         });
       });
 
+    handleHighlightLinks();
     //animate projects tiles
 
     const projectTiles = document.querySelectorAll(".project");
