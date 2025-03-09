@@ -8,7 +8,7 @@ const SectionPresentation = () => {
       </span>
       <span className="name">Paweł Daniszewski</span>
       <span className="occupation">DEVELOPER</span>
-      <span className="more-info">Jestem front end developerem z Warszawy</span>
+      <span className="more-info">Jestem Frontend Developerem z Warszawy</span>
     </section>
   );
 };
