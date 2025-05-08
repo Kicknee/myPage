@@ -12,7 +12,7 @@ function SectionSkills() {
         <div className="skill">JavaScript</div>
         <div className="skill">React.js</div>
         <div className="skill">React Native</div>
-        <div className="skill">Vue.js</div>
+        <div className="skill">Angular</div>
         <div className="skill">jQuery</div>
       </div>
       <div className="right">
