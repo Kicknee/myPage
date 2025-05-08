@@ -178,9 +178,19 @@ body {
   position: relative;
   justify-self: left;
   align-self: center;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
   overflow-y: scroll;
+}
+
+.skills > .left,
+.skills > .right {
+  display: grid;
+  grid-row: span 20;
+  grid-template-rows: subgrid;
 }
 .skill {
   padding: 25px;
