@@ -178,11 +178,9 @@ body {
   position: relative;
   justify-self: left;
   align-self: center;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-auto-rows: auto;
   overflow-y: scroll;
 }
 
@@ -194,11 +192,10 @@ body {
 }
 .skill {
   padding: 25px;
-  width: 50%;
 }
 
-.skill:nth-of-type(4n),
-.skill:nth-of-type(4n + 1) {
+.skills .left > .skill:nth-of-type(2n),
+.skills .right > .skill:nth-of-type(2n + 1) {
   color: #ff9933;
 }
 
