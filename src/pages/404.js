@@ -3,7 +3,7 @@ import SEO from "../components/SEO";
 import Container from "../components/Container";
 import { navigate } from "gatsby";
 
-import "../assets/css/not-found.css";
+import "../assets/styles/not-found.css";
 
 const Error = () => {
   setTimeout(() => {

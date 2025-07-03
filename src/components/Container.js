@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/main.css";
+import "../assets/styles/main.css";
 import RainCanvas from "../assets/canvas/matrix";
 
 const Container = ({ children }) => {

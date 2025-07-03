@@ -25,6 +25,16 @@ module.exports = {
         accessToken: process.env.MYPAGE_API_KEY,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `inter`,
+          `source sans pro\:100,300,400,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
