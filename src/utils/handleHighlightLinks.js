@@ -4,8 +4,8 @@ export function handleHighlightLinks() {
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const currentSection = document.querySelector(
-          `#${entry.target.className}-link`
+        const currentSection = document.getElementById(
+          `${entry.target.id}-link`
         );
         if (entry.isIntersecting) {
           currentSection.classList.add("active");
@@ -16,7 +16,7 @@ export function handleHighlightLinks() {
       });
     },
     {
-      root: document.querySelector(".container"),
+      root: document.getElementById("container"),
       threshold: 0.3,
     }
   );
