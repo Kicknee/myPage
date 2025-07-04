@@ -40,13 +40,13 @@ const IndexPage = () => {
     logVisitor();
 
     document
-      .querySelector(".container")
+      .querySelector("#container")
       .addEventListener("scroll", handlePresentationScroll);
 
     document
       .querySelector("#presentation-link")
       .addEventListener("click", (e) => {
-        document.querySelector(".container").scrollTo({
+        document.querySelector("#container").scrollTo({
           top: 0,
           left: 0,
           behavior: "smooth",
@@ -77,7 +77,7 @@ const IndexPage = () => {
     <Container>
       <SeO title="Home" />
       <Navbar />
-      <StyledContainer>
+      <StyledContainer id="container">
         <SectionPresentation />
         <SectionSkills />
         <SectionProjects />
@@ -113,18 +113,6 @@ const StyledContainer = styled.main`
     top: calc(5vh + 55px);
     height: calc(100vh - (5vh + 55px));
     grid-template-columns: 100%;
-    /* grid-template-rows: repeat(4, 1fr); */
-    grid-template-areas:
-      "presentation"
-      "skills"
-      "projects"
-      "contact";
-  }
-  ${(props) => props.theme.mq.lg} {
-    top: calc(5vh + 55px);
-    height: calc(100vh - (5vh + 55px));
-    grid-template-columns: 100%;
-    /* grid-template-rows: repeat(4, 1fr); */
     grid-template-areas:
       "presentation"
       "skills"

@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
 
 ::-webkit-scrollbar {
   width: 15px;
+
+  ${(props) => props.theme.mq.sm} {
+    width: 0px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -22,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar-thumb {
   background: rgba(137, 132, 132, 0.7);
   border-radius: 10px;
+
 }
 
 body {
@@ -39,4 +44,6 @@ body {
   overflow: hidden;
   scroll-padding-top: 25vh;
 }
+
+
 `;

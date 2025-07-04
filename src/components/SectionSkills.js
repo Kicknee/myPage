@@ -1,8 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 function SectionSkills() {
   return (
-    <section className="skills" id="skills">
+    <StyledSkills id="skills">
       <div className="left">
         <div className="skill">HTML5</div>
         <div className="skill">CSS3</div>
@@ -26,8 +27,62 @@ function SectionSkills() {
         <div className="skill">Next.js</div>
         <div className="skill">Gatsby</div>
       </div>
-    </section>
+    </StyledSkills>
   );
 }
 
 export default SectionSkills;
+
+const StyledSkills = styled.section`
+  height: 720px;
+  width: 595px;
+  background-color: ${(props) => props.theme.color.primary};
+  backdrop-filter: blur(5px);
+  font-size: 1.8rem;
+  padding: 20px;
+  grid-area: skills;
+  position: relative;
+  justify-self: left;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  overflow-y: scroll;
+
+  .left,
+  .right {
+    display: grid;
+    grid-row: span 20;
+    grid-template-rows: subgrid;
+  }
+
+  .skill {
+    padding: 25px;
+  }
+
+  .left .skill:nth-of-type(even),
+  .right .skill:nth-of-type(odd) {
+    color: #ff9933;
+  }
+
+  ${(props) => props.theme.mq.xl} {
+    width: 500px;
+    height: 620px;
+    font-size: 1.7rem;
+  }
+  ${(props) => props.theme.mq.lg} {
+    width: 80%;
+    font-size: 1.6rem;
+    justify-self: center;
+  }
+  ${(props) => props.theme.mq.sm} {
+    width: 100%;
+    height: 700px;
+    font-size: 1.4rem;
+    padding: 5px;
+
+    .skill {
+      padding: 20px;
+    }
+  }
+`;

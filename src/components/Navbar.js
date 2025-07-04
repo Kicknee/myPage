@@ -2,6 +2,37 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+const Navbar = () => {
+  return (
+    <StyledNavigation>
+      <ul>
+        <li>
+          <Link to="/" id="presentation-link">
+            Główna
+          </Link>
+        </li>
+        <li>
+          <Link to="#skills" id="skills-link">
+            Umiejętności
+          </Link>
+        </li>
+        <li>
+          <Link to="#projects" id="projects-link">
+            Projekty
+          </Link>
+        </li>
+        <li>
+          <Link to="#contact" id="contact-link">
+            Kontakt
+          </Link>
+        </li>
+      </ul>
+    </StyledNavigation>
+  );
+};
+
+export default Navbar;
+
 const StyledNavigation = styled.nav`
   position: fixed;
   top: 7vh;
@@ -43,6 +74,14 @@ const StyledNavigation = styled.nav`
     }
   }
 
+  ${(props) => props.theme.mq.xl} {
+    width: 500px;
+  }
+  ${(props) => props.theme.mq.lg} {
+    width: 100%;
+    top: 10px;
+    left: 0;
+  }
   ${(props) => props.theme.mq.sm} {
     padding: 0 5px;
 
@@ -50,42 +89,4 @@ const StyledNavigation = styled.nav`
       font-size: 1.1rem;
     }
   }
-  ${(props) => props.theme.mq.lg} {
-    width: 100%;
-    top: 10px;
-    left: 0;
-  }
-  ${(props) => props.theme.mq.xl} {
-    width: 500px;
-  }
 `;
-const Navbar = () => {
-  return (
-    <StyledNavigation>
-      <ul>
-        <li>
-          <Link to="/" id="presentation-link">
-            Główna
-          </Link>
-        </li>
-        <li>
-          <Link to="#skills" id="skills-link">
-            Umiejętności
-          </Link>
-        </li>
-        <li>
-          <Link to="#projects" id="projects-link">
-            Projekty
-          </Link>
-        </li>
-        <li>
-          <Link to="#contact" id="contact-link">
-            Kontakt
-          </Link>
-        </li>
-      </ul>
-    </StyledNavigation>
-  );
-};
-
-export default Navbar;

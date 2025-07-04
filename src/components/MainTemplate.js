@@ -6,8 +6,11 @@ import { theme } from "../assets/styles/theme";
 export function MainTemplate({ children }) {
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+
+        {children}
+      </ThemeProvider>
     </>
   );
 }
