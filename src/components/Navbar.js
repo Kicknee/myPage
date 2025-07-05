@@ -1,30 +1,29 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 
 const Navbar = () => {
   return (
-    <StyledNavigation>
+    <StyledNavigation id="top">
       <ul>
         <li>
-          <Link to="/" id="presentation-link">
+          <a href="#top" id="presentation-link">
             Główna
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="#skills" id="skills-link">
+          <a href="#skills" id="skills-link">
             Umiejętności
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="#projects" id="projects-link">
+          <a href="#projects" id="projects-link">
             Projekty
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="#contact" id="contact-link">
+          <a href="#contact" id="contact-link">
             Kontakt
-          </Link>
+          </a>
         </li>
       </ul>
     </StyledNavigation>
