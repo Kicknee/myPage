@@ -4,7 +4,7 @@ export const theme = {
   },
   font: {
     family: {
-      inter: `"Inter", sans-serif"`,
+      inter: `"Inter", sans-serif`,
     },
   },
   mq: {
