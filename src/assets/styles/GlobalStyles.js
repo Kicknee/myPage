@@ -33,7 +33,7 @@ body {
   color: white;
   font-size: 16px;
   overflow: hidden;
-  font-family: "Inter", sans-serif
+  font-family: ${(props) => props.theme.font.family.inter}
 }
 
 .body {
