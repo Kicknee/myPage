@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const Navbar = () => {
   return (
-    <StyledNavigation id="top">
+    <StyledNavigation id="home">
       <ul>
         <li>
-          <a href="#top" id="presentation-link">
+          <a href="#home" id="presentation-link">
             Główna
           </a>
         </li>
