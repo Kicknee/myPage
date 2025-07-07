@@ -42,18 +42,9 @@ const StyledNavigation = styled.nav`
   display: flex;
   justify-content: end;
   padding: 0 20px;
+  background-color: ${(props) => props.theme.color.primary};
+  backdrop-filter: blur(5px);
 
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: ${(props) => props.theme.color.primary};
-    z-index: -1;
-    backdrop-filter: blur(5px);
-  }
   ul {
     list-style: none;
     width: 100%;

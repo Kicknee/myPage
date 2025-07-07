@@ -6,7 +6,7 @@ const RainCanvas = () => {
   const fontSize = 10;
   let columns, drops;
 
-  // funkcja inicjujaca canvas i tablice
+  // initialize canvas and table
 
   const initialize = () => {
     const canvas = canvasRef.current;
@@ -24,7 +24,7 @@ const RainCanvas = () => {
     ctx.font = `${fontSize}px Arial`;
   };
 
-  //rysuje litery na canvasie
+  // draw letter on canvas
 
   const draw = () => {
     const canvas = canvasRef.current;
@@ -50,7 +50,7 @@ const RainCanvas = () => {
     initialize();
     const interval = setInterval(draw, 33);
 
-    // Aktualizuj po zmianie rozmiaru okna
+    // Refresh matrix effect after screen size change
     const resizeHandler = () => {
       initialize();
     };

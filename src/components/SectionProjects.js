@@ -105,6 +105,20 @@ const StyledProjects = styled.section`
     justify-content: space-around;
     align-self: center;
     padding: 30px;
+    background-color: ${(props) => props.theme.color.primary};
+    backdrop-filter: blur(5px);
+    clip-path: polygon(
+      0 0,
+      90% 0,
+      100% 22%,
+      100% 100%,
+      80% 100%,
+      50% 100%,
+      11% 100%,
+      0 82%,
+      0% 35%,
+      0 12%
+    );
   }
   .project .projectTitle {
     font-size: 1.9rem;
@@ -136,29 +150,6 @@ const StyledProjects = styled.section`
   }
   .project .projectTechStack span:last-of-type::after {
     content: "";
-  }
-  .projectInfo:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: ${(props) => props.theme.color.primary};
-    z-index: -1;
-    backdrop-filter: blur(5px);
-    clip-path: polygon(
-      0 0,
-      90% 0,
-      100% 22%,
-      100% 100%,
-      80% 100%,
-      50% 100%,
-      11% 100%,
-      0 82%,
-      0% 35%,
-      0 12%
-    );
   }
   .projectThumb {
     width: 495px;

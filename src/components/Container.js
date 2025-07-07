@@ -4,7 +4,7 @@ import RainCanvas from "../assets/canvas/matrix";
 const Container = ({ children }) => {
   return (
     <>
-      <div className="body">{children}</div>
+      <div className="container">{children}</div>
       <RainCanvas />
     </>
   );

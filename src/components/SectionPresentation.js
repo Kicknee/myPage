@@ -29,30 +29,22 @@ const StyledPresentation = styled.section`
   margin-right: 200px;
   padding: 30px;
   transition: transform 0.5s;
+  background-color: ${(props) => props.theme.color.primary};
 
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: ${(props) => props.theme.color.primary};
-    z-index: -1;
-    backdrop-filter: blur(5px);
-    clip-path: polygon(
-      0 0,
-      90% 0,
-      100% 22%,
-      100% 100%,
-      80% 100%,
-      50% 100%,
-      11% 100%,
-      0 82%,
-      0% 35%,
-      0 12%
-    );
-  }
+  backdrop-filter: blur(5px);
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    100% 22%,
+    100% 100%,
+    80% 100%,
+    50% 100%,
+    11% 100%,
+    0 82%,
+    0% 35%,
+    0 12%
+  );
+
   .name {
     font-size: 2.9rem;
     margin: 45px 0 10px 0;

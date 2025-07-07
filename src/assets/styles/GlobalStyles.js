@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { showElements } from "../../utils/showElements";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -36,7 +37,7 @@ body {
   font-family: ${(props) => props.theme.font.family.inter}
 }
 
-.body {
+.container {
   z-index: 10;
   position: relative;
   width: 100%;
@@ -45,5 +46,21 @@ body {
   scroll-padding-top: 25vh;
 }
 
+nav, section:not(#projects) {
+  opacity: 0;
+  /* animation: fade-in 2s 1s ease-in forwards; */
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+${showElements}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    
+  }
+}
 
 `;

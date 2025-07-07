@@ -1,4 +1,4 @@
-export function handleHighlightLinks() {
+export function highlightLinks() {
   const sections = document.querySelectorAll("section:not(.presentation)");
 
   const sectionObserver = new IntersectionObserver(
