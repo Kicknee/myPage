@@ -19,7 +19,7 @@ export const onInitialClientRender = () => {
   logVisitor();
 };
 
-export const wrapRootElement = ({ element }) => (
+export const wrapPageElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     {element}
