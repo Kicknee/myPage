@@ -4,6 +4,7 @@ export const handleScroll = () => {
   document
     .querySelector("#container")
     .addEventListener("scroll", handlePresentationScroll);
+  window.addEventListener("resize", handlePresentationScroll);
 
   document
     .querySelector("#presentation-link")

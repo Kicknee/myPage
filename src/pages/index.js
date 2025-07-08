@@ -17,6 +17,7 @@ const IndexPage = () => {
       <StyledContainer id="container">
         <SectionPresentation />
         <SectionSkills />
+
         <SectionProjects />
         <SectionContact />
       </StyledContainer>
