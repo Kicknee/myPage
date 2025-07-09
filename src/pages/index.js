@@ -1,6 +1,6 @@
 import React from "react";
 
-import SeO from "../components/SEO";
+import SEO from "../components/SEO";
 import Container from "../components/Container";
 import Navbar from "../components/Navbar";
 import SectionContact from "../components/SectionContact";
@@ -12,7 +12,8 @@ import styled from "styled-components";
 const IndexPage = () => {
   return (
     <Container>
-      <SeO title="Home" />
+      {/*eslint-disable-next-line react/jsx-pascal-case*/}
+      <SEO title="Home" />
       <Navbar />
       <StyledContainer id="container">
         <SectionPresentation />

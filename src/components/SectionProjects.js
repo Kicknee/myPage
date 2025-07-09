@@ -47,14 +47,14 @@ const ProjectsSection = () => {
                 })}
               </ul>
               <div className="projectSource">
-                {project.www != undefined ? (
-                  <a href={project.www} target="_blank">
+                {project.www !== undefined ? (
+                  <a href={project.www} rel="noreferrer" target="_blank">
                     <BiCodeCurly />
                   </a>
                 ) : (
                   ""
                 )}
-                <a href={project.sourceCode} target="_blank">
+                <a href={project.sourceCode} rel="noreferrer" target="_blank">
                   <BsGithub />
                 </a>
               </div>

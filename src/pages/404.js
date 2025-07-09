@@ -12,6 +12,7 @@ const Error = () => {
 
   return (
     <Container>
+      {/*eslint-disable-next-line react/jsx-pascal-case*/}
       <SEO title="404" />
       <Styled404 className="error-404">
         <div className="rainyCloudBox">
