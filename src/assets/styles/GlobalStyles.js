@@ -11,30 +11,44 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
 }
 
-::-webkit-scrollbar {
-  width: 15px;
 
+// Universal scrollbar styling 
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(137, 132, 132, 0.7) transparent; /* thumb | track */
+  
   ${(props) => props.theme.mq.sm} {
-    width: 0px;
+    scrollbar-width: 1px;
   }
 }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+// Alternative scrollbar styling except for Frefox browser
+  ::-webkit-scrollbar {
+    width: 10px;
+  
+    ${(props) => props.theme.mq.sm} {
+      width: 0px;
+    }
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(137, 132, 132, 0.7);
+    border-radius: 10px;
+  
+  }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(137, 132, 132, 0.7);
-  border-radius: 10px;
-
-}
 
 body {
   color: white;
   font-size: 16px;
   overflow: hidden;
-  font-family: ${(props) => props.theme.font.family.inter}
+  font-family: ${(props) => props.theme.font.family.inter};
 }
 
 .container {
