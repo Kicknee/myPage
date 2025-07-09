@@ -22,7 +22,7 @@ function SectionContact() {
 export default SectionContact;
 
 const StyledContact = styled.section`
-  max-width: 950px;
+  width: 950px;
   height: 600px;
   grid-area: contact;
   position: relative;
@@ -70,10 +70,10 @@ const StyledContact = styled.section`
     letter-spacing: 2px;
   }
 
-  ${(props) => props.theme.lg} {
+  ${(props) => props.theme.mq.lg} {
     width: 90%;
   }
-  ${(props) => props.theme.sm} {
+  ${(props) => props.theme.mq.sm} {
     width: 100%;
     height: 620px;
 
