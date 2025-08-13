@@ -27,6 +27,7 @@ const ProjectsSection = () => {
     }
   `);
 
+  console.log(projects);
   return (
     <StyledProjects id="projects">
       {projects.map((project, indx) => {
@@ -47,7 +48,7 @@ const ProjectsSection = () => {
                 })}
               </ul>
               <div className="projectSource">
-                {project.www !== undefined ? (
+                {project.www != undefined ? (
                   <a href={project.www} rel="noreferrer" target="_blank">
                     <BiCodeCurly />
                   </a>
