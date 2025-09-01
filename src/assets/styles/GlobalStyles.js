@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(137, 132, 132, 0.7) transparent; /* thumb | track */
+  scrollbar-color: rgba(137, 132, 132, 0.7) transparent;
   
   ${(props) => props.theme.mq.sm} {
     scrollbar-width: 1px;
@@ -49,6 +49,7 @@ body {
   font-size: 16px;
   overflow: hidden;
   font-family: ${(props) => props.theme.font.family.inter};
+  background-color: black;
 }
 
 .container {
