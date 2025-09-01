@@ -27,7 +27,6 @@ const ProjectsSection = () => {
     }
   `);
 
-  console.log(projects);
   return (
     <StyledProjects id="projects">
       {projects.map((project, indx) => {
