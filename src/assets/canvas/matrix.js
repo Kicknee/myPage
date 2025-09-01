@@ -61,7 +61,7 @@ const RainCanvas = () => {
       clearInterval(interval);
       window.removeEventListener("resize", resizeHandler);
     };
-  });
+  }, []);
 
   return (
     <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0 }} />
