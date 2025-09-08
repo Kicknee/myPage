@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "home": "Główna",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "presentation": {
+    "greeting": "CZEŚĆ 🖖, NAZYWAM SIĘ",
+    "name": "Paweł Daniszewski",
+    "occupation": "DEVELOPER",
+    "moreInfo": "Jestem Frontend Developerem z Warszawy"
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "left": [
+      "HTML5",
+      "CSS3",
+      "SASS",
+      "Tailwind",
+      "Bootstrap",
+      "JavaScript",
+      "React.js",
+      "React Native",
+      "Angular",
+      "jQuery"
+    ],
+    "right": [
+      "Express.js",
+      "MongoDB",
+      "Cypress",
+      "GIT",
+      "Redux",
+      "Zustand",
+      "TypeScript",
+      "Next.js",
+      "Gatsby"
+    ]
+  },
+  "projects": {
+    "title": "Projekty"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Imię i nazwisko:",
+    "email": "Adres email:",
+    "message": "Treść wiadomości:",
+    "submit": "WYŚLIJ"
+  }
+}
