@@ -1,15 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslationContext } from "../context/TranslationContext";
 
 const SectionPresentation = () => {
+  const { t } = useTranslationContext();
+
   return (
     <StyledPresentation id="presentation">
       <span className="greeting">
-        <span>CZEŚĆ</span> 🖖, NAZYWAM SIĘ
+        <span>{t("presentation.greeting_part1")}</span> 🖖,{" "}
+        {t("presentation.greeting_part2")}
       </span>
-      <span className="name">Paweł Daniszewski</span>
-      <span className="occupation">DEVELOPER</span>
-      <span className="more-info">Jestem Frontend Developerem z Warszawy</span>
+      <span className="name">{t("presentation.name")}</span>
+      <span className="occupation">{t("presentation.occupation")}</span>
+      <span className="more-info">{t("presentation.moreInfo")}</span>
     </StyledPresentation>
   );
 };

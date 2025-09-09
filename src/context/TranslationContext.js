@@ -7,7 +7,7 @@ const TranslationContext = createContext();
 const translations = { en, pl };
 
 const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState("pl");
+  const [language, setLanguage] = useState("en");
 
   const t = (key) => {
     const keys = key.split(".");

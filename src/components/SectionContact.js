@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslationContext } from "../context/TranslationContext";
 
 function SectionContact() {
+  const { t } = useTranslationContext();
+
   return (
     <StyledContact className="contact" id="contact">
       <form action="https://formspree.io/f/mknadrqp" method="POST">
-        <label htmlFor="name">Imię i nazwisko:</label>
+        <label htmlFor="name">{t("contact.name")}</label>
         <input type="text" name="name" id="name" required />
-        <label htmlFor="email">Adres email:</label>
+        <label htmlFor="email">{t("contact.email")}</label>
         <input type="email" name="email" id="email" required />
-        <label htmlFor="message">Treść wiadomości:</label>
+        <label htmlFor="message">{t("contact.message")}</label>
         <textarea type="textArea" name="message" id="message" required />
         <button type="submit" className="submit">
-          WYŚLIJ
+          {t("contact.submit")}
         </button>
       </form>
     </StyledContact>

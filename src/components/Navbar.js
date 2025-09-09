@@ -1,28 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-
+import { useTranslationContext } from "../context/TranslationContext";
 const Navbar = () => {
+  const { t, language, setLanguage } = useTranslationContext();
+
   return (
     <StyledNavigation id="home">
       <ul>
         <li>
           <a href="#home" id="presentation-link">
-            Główna
+            {t("navbar.home")}
           </a>
         </li>
         <li>
           <a href="#skills" id="skills-link">
-            Umiejętności
+            {t("navbar.skills")}
           </a>
         </li>
         <li>
           <a href="#projects" id="projects-link">
-            Projekty
+            {t("navbar.projects")}
           </a>
         </li>
         <li>
           <a href="#contact" id="contact-link">
-            Kontakt
+            {t("navbar.contact")}
           </a>
         </li>
       </ul>
