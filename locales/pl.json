@@ -6,7 +6,8 @@
     "contact": "Kontakt"
   },
   "presentation": {
-    "greeting": "CZEŚĆ 🖖, NAZYWAM SIĘ",
+    "greeting_part1": "CZEŚĆ",
+    "greeting_part2": "NAZYWAM SIĘ",
     "name": "Paweł Daniszewski",
     "occupation": "DEVELOPER",
     "moreInfo": "Jestem Frontend Developerem z Warszawy"

@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "presentation": {
-    "greeting": "HELLO 🖖, MY NAME IS",
+    "greeting_part1": "HELLO",
+    "greeting_part2": "MY NAME IS",
     "name": "Paweł Daniszewski",
     "occupation": "DEVELOPER",
     "moreInfo": "I am a Frontend Developer from Warsaw"
