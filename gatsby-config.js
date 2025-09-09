@@ -40,6 +40,28 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`,
       },
     },
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locales`,
+        path: `${__dirname}/locales`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locales`,
+        languages: [`en`, `pl`],
+        defaultLanguage: `pl`,
+        siteUrl: `http://localhost:8000`,
+        i18nextOptions: {
+          interpolation: { escapeValue: false },
+          keySeparator: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
   ],
 };

@@ -7,6 +7,7 @@ import { highlightLinks } from "./src/utils/highlightLinks";
 import { fadeInProject } from "./src/utils/fadeInProject";
 import { logVisitor } from "./src/services/logVisitor";
 import { handleScroll } from "./src/utils/handleScroll";
+import { TranslationProvider } from "./src/context/TranslationContext";
 
 export const onInitialClientRender = () => {
   //highlight active jump link
@@ -20,8 +21,10 @@ export const onInitialClientRender = () => {
 };
 
 export const wrapPageElement = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    {element}
-  </ThemeProvider>
+  <TranslationProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {element}
+    </ThemeProvider>
+  </TranslationProvider>
 );
