@@ -1,8 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import { useTranslationContext } from "../context/TranslationContext";
+import { IoLanguage } from "react-icons/io5";
+
 const Navbar = () => {
   const { t, language, setLanguage } = useTranslationContext();
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (lang === "pl") {
+      searchParams.set("lang", "pl");
+    } else {
+      searchParams.delete("lang");
+    }
+
+    const queryString = searchParams.toString();
+    const newUrl = queryString
+      ? `${window.location.pathname}?${queryString}`
+      : window.location.pathname;
+
+    window.history.pushState({}, "", newUrl);
+  };
 
   return (
     <StyledNavigation id="home">
@@ -26,6 +47,16 @@ const Navbar = () => {
           <a href="#contact" id="contact-link">
             {t("navbar.contact")}
           </a>
+        </li>
+        <li>
+          <button
+            onClick={() =>
+              handleLanguageChange(language === "pl" ? "en" : "pl")
+            }
+          >
+            <IoLanguage />
+            {language === "en" ? "EN" : "PL"}
+          </button>
         </li>
       </ul>
     </StyledNavigation>
@@ -63,6 +94,20 @@ const StyledNavigation = styled.nav`
     }
     &.active {
       color: #ff9933;
+    }
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 1.3rem;
+    border-left: 2px solid white;
+    padding-left: 10px;
+    &:hover {
+      color: #f68c22;
     }
   }
 
