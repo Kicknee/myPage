@@ -4,13 +4,19 @@ import { BiCodeCurly } from "react-icons/bi";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+import { useTranslationContext } from "../context/TranslationContext";
 
 const ProjectsSection = () => {
+  const { language } = useTranslationContext();
+
   const {
     allContentfulMyPage: { nodes: projects },
   } = useStaticQuery(graphql`
     query MyQuery {
-      allContentfulMyPage(sort: { order: DESC }) {
+      allContentfulMyPage(
+        sort: { order: DESC }
+        filter: { node_locale: { in: ["pl", "en-US"] } }
+      ) {
         nodes {
           title
           techStack {
@@ -22,14 +28,24 @@ const ProjectsSection = () => {
           description
           sourceCode
           www
+          node_locale
         }
       }
     }
   `);
 
+  // Filter projects based on the current language
+  const filteredProjects = projects.filter(
+    (project) =>
+      (language === "en" && project.node_locale === "en-US") ||
+      (language === "pl" && project.node_locale === "pl")
+  );
+
+  const projectsToShow =
+    filteredProjects.length > 0 ? filteredProjects : projects;
   return (
     <StyledProjects id="projects">
-      {projects.map((project, indx) => {
+      {projectsToShow.map((project, indx) => {
         const projectScreen = getImage(project.screen);
         return (
           <div key={indx} className="project">
