@@ -7,7 +7,14 @@ const TranslationContext = createContext();
 const translations = { en, pl };
 
 const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const searchParams = new URLSearchParams(
+    typeof window !== "undefined" ? window.location.search : ""
+  );
+  const lang = searchParams.get("lang") || "en"; // default en
+
+  // const value = useMemo(() => ({ lang }), [lang]);
+
+  const [language, setLanguage] = useState(lang);
 
   const t = (key) => {
     const keys = key.split(".");
