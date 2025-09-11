@@ -55,7 +55,7 @@ const Navbar = () => {
             }
           >
             <IoLanguage />
-            {language === "en" ? "EN" : "PL"}
+            <span>{language === "en" ? "EN" : "PL"}</span>
           </button>
         </li>
       </ul>
@@ -124,6 +124,12 @@ const StyledNavigation = styled.nav`
 
     a {
       font-size: 1.1rem;
+    }
+    button {
+      padding-left: 7px;
+      span {
+        display: none;
+      }
     }
   }
 `;
